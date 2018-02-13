@@ -1,0 +1,156 @@
+/*This is my screen css file*/
+
+/*@imports comes first.*/
+
+@import url('https://fonts.googleapis.com/css?family=Sansita');
+@import url('normalize.css');
+
+
+* {
+    box-sizing: border-box; /* changes width property
+    to total width instead of content width */
+}
+*:before, *:after{
+    box-sizing: border-box;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section,
+main,
+figcaption,
+figure {
+    display: block; /* just in case we have
+    any older browsers that don't recognize
+    the HTML5 semantic elements */
+}
+
+body {
+    margin: 0; /* remove any margin from body */
+    padding: 0; /* ditto for padding */
+    font-size: 20px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Sansita, arial, sans-serif;
+}
+
+/* Mobile rules*/
+
+
+.site-title {
+    font-size: 2em;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.logo, .site-title{
+display: inline-block;
+}
+
+.logo {
+    font-size: 4em;
+    padding-top:20px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    height: auto;
+    padding: 5px 0px 0px 15px;
+    text-transform: uppercase;
+
+}
+
+nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #d8d8d8;
+
+}
+
+nav a:link {
+    text-decoration: none;
+    color: #0e89d5;
+}
+
+nav a:visited {
+    color: #000;
+}
+
+nav a:hover {
+    color: #FFF;
+}
+
+nav a:active {
+    color: #FFF;
+}
+
+#curWeather {
+    background-image: url("/weather/images/sunny-winter.jpg");
+    background-size: cover;
+    margin: .2em auto;
+    border: 1px solid;
+}
+
+#smallConditions {
+    background-color: rgba(200, 200, 200, .8);
+    margin: 10px;
+    padding: 0px 0px 0px 20px;
+    border: 1px solid;
+    border-radius: 15px;
+}
+
+#temps {
+    display: inline-block;
+}
+
+#temps h3 {
+    font-size: 60px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#hot {
+    color: red;
+    display: inline-block;
+    margin: 0px;
+}
+
+#cold {
+    color: blue;
+    display: inline-block;
+    padding-left: 40px;
+    margin: 0px;
+}
+
+
+#wind {
+    display: inline-block;
+    margin-left: 30px;
+}
+
+#wind h2 {
+    margin-bottom: 55px;
+}
+
+#video {
+    background-color: rgba(200, 200, 200, .8);
+    margin: 10px;
+    padding: 0px 0px 20px 20px;
+    border: 1px solid;
+    border-radius: 15px;
+}
+
+footer {
+    margin-bottom: 2em;
+}

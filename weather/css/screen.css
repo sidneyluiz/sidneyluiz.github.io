@@ -7,10 +7,13 @@
 
 
 * {
-    box-sizing: border-box; /* changes width property
+    box-sizing: border-box;
+    /* changes width property
     to total width instead of content width */
 }
-*:before, *:after{
+
+*:before,
+*:after {
     box-sizing: border-box;
 }
 
@@ -23,14 +26,17 @@ section,
 main,
 figcaption,
 figure {
-    display: block; /* just in case we have
+    display: block;
+    /* just in case we have
     any older browsers that don't recognize
     the HTML5 semantic elements */
 }
 
 body {
-    margin: 0; /* remove any margin from body */
-    padding: 0; /* ditto for padding */
+    margin: 0;
+    /* remove any margin from body */
+    padding: 0;
+    /* ditto for padding */
     font-size: 20px;
 }
 
@@ -45,23 +51,23 @@ h6 {
 
 /* Mobile rules*/
 
-
 .site-title {
     font-size: 2em;
     font-weight: 600;
     display: inline-block;
 }
 
-.logo, .site-title{
-display: inline-block;
+.logo,
+.site-title {
+    display: inline-block;
 }
 
 .logo {
     font-size: 4em;
-    padding-top:20px;
+    padding-top: 20px;
 }
 
-nav ul{
+nav ul {
     padding-left: 10px;
 }
 
@@ -69,9 +75,8 @@ nav ul li {
     display: inline-block;
     list-style: none;
     height: auto;
-    padding: 0px 10px 0px 0px;
+    padding: 0px 10px 0px 20px;
     text-transform: uppercase;
-
 }
 
 nav {

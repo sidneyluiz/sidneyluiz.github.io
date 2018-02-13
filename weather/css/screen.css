@@ -79,6 +79,10 @@ nav ul li {
     text-transform: uppercase;
 }
 
+#hourly{
+    list-style: none;
+}
+
 nav {
     position: fixed;
     bottom: 0;

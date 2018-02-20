@@ -213,6 +213,10 @@ nav a:active {
     margin: 10px auto;
     }
 
+#hourly h3{
+    display: none;
+}
+
 #hourly ul {
     display: flex;
     overflow-x: scroll;

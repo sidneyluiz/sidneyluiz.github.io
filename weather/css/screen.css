@@ -153,7 +153,7 @@ nav a:active {
     display: flex;
     flex-wrap: wrap;
     align-content: space-around;
-    width: 60%;
+    width: 65%;
 }
 
 #temps h3 {
@@ -164,7 +164,7 @@ nav a:active {
 
 #hot {
     color: red;
-    padding-left: 15px;
+    padding-left: 10px;
     margin: 0px;
 }
 

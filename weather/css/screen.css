@@ -164,13 +164,13 @@ nav a:active {
 
 #hot {
     color: red;
-    padding-left: 10px;
+    padding-left: 25px;
     margin: 0px;
 }
 
 #cold {
     color: blue;
-    padding-left: 25px;
+    padding-left: 15px;
     margin: 0px;
 }
 

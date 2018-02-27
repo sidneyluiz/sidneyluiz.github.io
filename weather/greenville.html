@@ -4,22 +4,104 @@
   <meta charset="UTF-8">
      <title>Greenville, SC | Weather Site</title>
      <meta name="description" content="Greenville, SC Weather Page.">
-  <meta name="viewport" content="width=device-width">
- </head>
- <body>
-     <header>
-         <h1>Greenville, SC</h1>
-     </header>
-     <nav>
-         <ul>
-             <li><a href="/index.html" title="Go to home page">Home</a></li>
-         </ul>
-     </nav>
-     <main>
+     <meta name="viewport" content="width=device-width">
+     <link rel="stylesheet" href="/weather/css/screen.css">
+    </head>
 
-     </main>
-     <footer>
-         &copy;2018 Weather Site
-     </footer>
- </body>
+    <body>
+        <div>
+            <header>
+                <div class="logo">
+                    &#9748;
+                </div>
+                <h1 class="site-title">The Weather Site</h1>
+            </header>
+
+            <nav>
+                <ul>
+                    <li><a href="/index.html" title="Go to home page">Home</a></li>
+                    <li><a href="#" title="Search content in the website">Search</a></li>
+                    <li><a href="/weather/franklin.html" title="Go to Franklin weather page">Franklin</a></li>
+                    <li><a href="/weather/greenville.html" title="Go to Greenville weather page">Greenville</a></li>
+                    <li><a href="/weather/springfield.html" title="Go to Springfield weather page">Springfield</a></li>
+                </ul>
+            </nav>
+
+            <main>
+
+                <h1>Greenville, South Caroline</h1>
+
+                <div id="locationInfo">
+                    <p><b>Zip:</b> 29601 |<b>Elevation:</b> 966 ft. |<b>Location:</b> 34.85&deg; N, -82.4&deg; E</p>
+                </div>
+
+
+                <!-- curWeather holds temps, wind and video data -->
+                <div id="curWeather">
+                    <!-- smallConditions holds temps, wind data -->
+                    <div id="smallConditions">
+
+                        <section id="temps">
+                            <h2>Temperature</h2>
+
+                            <h3 id="tempRightNow">47&deg;F</h3>
+                            <p id="hot">53&deg;F</p>
+                            <p id="cold">36&deg;F</p>
+                            <p id="feels">Feels like 40&deg;F</p>
+                        </section>
+
+                        <section id="wind">
+                            <h2>Wind</h2>
+                            <span id="north">N</span>
+                            <div id="dial">
+                                <img src="/weather/images/wind-pointer.png" alt="Dial to indicate the direction of the wind">
+                            </div>
+                            <p id="speed">8 mph</p>
+                            <p><b>Direction</b>: SW</p>
+                            <p><b>Gusts</b>: 5mph</p>
+                        </section>
+                    </div>
+
+                    <section id="video">
+                        <h2>Video Forecast</h2>
+                        <img src=/weather/images/video.png alt="Video Player Image">
+                    </section>
+                </div>
+
+                <section id="hourly">
+                    <h2>Hourly Forecast</h2>
+                    <ul>
+                        <li>12am: 39&deg;F</li>
+                        <li>1am: 38&deg;F</li>
+                        <li>2am: 38&deg;F</li>
+                        <li>3am: 37&deg;F</li>
+                        <li>4am: 37&deg;F</li>
+                        <li>5am: 36&deg;F</li>
+                        <li>6am: 36&deg;F</li>
+                        <li>7am: 36&deg;F</li>
+                        <li>8am: 37&deg;F</li>
+                        <li>9am: 40&deg;F</li>
+                        <li>10am: 44&deg;F</li>
+                        <li>11am: 48&deg;F</li>
+                        <li>12pm: 50&deg;F</li>
+                        <li>1pm: 51&deg;F</li>
+                        <li>2pm: 52&deg;F</li>
+                        <li>3pm: 52&deg;F</li>
+                        <li>4pm: 53&deg;F</li>
+                        <li>5pm: 53&deg;F</li>
+                        <li>6pm: 53&deg;F</li>
+                        <li>7pm: 51&deg;F</li>
+                        <li>8pm: 51&deg;F</li>
+                        <li>9pm: 50&deg;F</li>
+                        <li>10pm: 49&deg;F</li>
+                        <li>11pm: 49&deg;F</li>
+                    </ul>
+                </section>
+            </main>
+            <div class="linha"></div>
+            <footer>
+                &copy;2018 Weather Site
+            </footer>
+        </div>
+    </body>
 </html>

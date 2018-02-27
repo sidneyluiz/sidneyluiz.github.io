@@ -10,6 +10,7 @@
 </head>
 
 <body>
+   <div>
     <header>
         <div class="logo">
             &#9748;
@@ -44,10 +45,10 @@
                 <section id="temps">
                     <h2>Temperature</h2>
 
-                    <h3>24&deg;F</h3>
+                    <h3 id="tempRightNow">24&deg;F</h3>
                     <p id="hot">34&deg;F</p>
                     <p id="cold">21&deg;F</p>
-                    <p>Feels like 21&deg;F</p>
+                    <p id="feels">Feels like 21&deg;F</p>
                 </section>
 
                 <section id="wind">
@@ -56,20 +57,20 @@
                     <div id="dial">
                         <img src="/weather/images/wind-pointer.png" alt="Dial to indicate the direction of the wind">
                     </div>
-                    <p>2 mph</p>
+                    <p id="speed">2 mph</p>
                     <p><b>Direction</b>: NW</p>
                     <p><b>Gusts</b>: 5mph</p>
                 </section>
             </div>
 
             <section id="video">
-                <h3>Video Forecast</h3>
+                <h2>Video Forecast</h2>
                 <img src=/weather/images/video.png alt="Video Player Image">
             </section>
         </div>
 
         <section id="hourly">
-            <h3>Hourly Forecast</h3>
+            <h2>Hourly Forecast</h2>
             <ul>
                 <li>12am: 21&deg;F</li>
                 <li>1am: 21&deg;F</li>
@@ -98,9 +99,10 @@
             </ul>
         </section>
     </main>
+       <div class="linha"></div>
     <footer>
         &copy;2018 Weather Site
     </footer>
+    </div>
 </body>
-
 </html>

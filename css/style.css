@@ -74,7 +74,8 @@ nav ul {
     display: inline-block;
     vertical-align: top;
     margin: .5%;
-    padding: 10px;
+    padding: 0px;
+    background: #ddd;
 }
 
 .half {
@@ -124,6 +125,10 @@ header nav #rep a:hover {
 
 header nav #per a:hover {
     background: #857b71;
+}
+
+#subt{
+    font-size: 2em;
 }
 
 article {
@@ -312,6 +317,10 @@ footer p {
     animation: rotateWord 18s linear infinite 0s;
 }
 
+.small-caption{
+    display: none;
+}
+
 .rw-words-1 span:nth-child(2) {
     -webkit-animation-delay: 3s;
     -ms-animation-delay: 3s;
@@ -383,6 +392,14 @@ footer p {
 
 @media (max-width: 800px) {
 
+
+    .large-caption{
+        display: none;
+    }
+
+    .small-caption{
+        display: block;
+    }
 
     .greydivpad {
         background-color: #dddddd;

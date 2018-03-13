@@ -38,7 +38,7 @@
 
 
         <!-- curWeather holds temps, wind and video data -->
-        <div id="curWeather">
+        <div id="curWeather" class="clear">
             <!-- smallConditions holds temps, wind data -->
             <div id="smallConditions">
 
@@ -48,14 +48,13 @@
                     <h3 id="tempRightNow">24&deg;F</h3>
                     <p id="hot">34&deg;F</p>
                     <p id="cold">21&deg;F</p>
-                    <p id="feels">Feels like 21&deg;F</p>
+                    <p id="feels">??</p>
                 </section>
 
                 <section id="wind">
                     <h2>Wind</h2>
                     <span id="north">N</span>
-                    <div id="dial">
-                        <img src="/weather/images/wind-pointer.png" alt="Dial to indicate the direction of the wind">
+                    <div id="dial" class="n">
                     </div>
                     <p id="speed">2 mph</p>
                     <p><b>Direction</b>: NW</p>
@@ -104,5 +103,6 @@
         &copy;2018 Weather Site
     </footer>
     </div>
+    <script src="/weather/js/functions.js"></script>
 </body>
 </html>

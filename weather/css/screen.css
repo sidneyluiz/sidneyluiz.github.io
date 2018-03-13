@@ -77,6 +77,39 @@ h1{
     padding-left: 5px;
 }
 
+.n{
+    transform: rotate(0deg);
+}
+
+.ne{
+    transform: rotate(45deg);
+}
+
+.nw{
+    transform: rotate(315deg);
+}
+
+.s{
+    transform: rotate(180deg);
+}
+
+.se{
+    transform: rotate(135deg);
+}
+
+.sw{
+    transform: rotate(225deg);
+}
+
+.e{
+    transform: rotate(90deg);
+}
+
+.w{
+    transform: rotate(270deg);
+}
+
+
 #locationInfo {
     width: 100%;
     display: flex;
@@ -130,11 +163,32 @@ nav a:active {
 }
 
 #curWeather {
-    background-image: url("/weather/images/sunny-winter.jpg");
     background-size: cover;
-    margin: .2em auto;
     border: 1px solid;
+    margin: .2em auto;
+
 }
+
+.clear{
+   background-image: url(/weather/images/weather-images/clear-600x500.jpg);
+}
+
+.clouds{
+    background-image: url(/weather/images/weather-images/clouds-600x500.jpg);
+}
+
+.fog{
+    background-image: url(/weather/images/weather-images/fog-600x500.jpg)
+}
+
+.rain{
+    background-image: url(/weather/images/weather-images/rain-600x500.jpg)
+}
+
+.snow{
+    background-image: url(/weather/images/weather-images/snow-600x500.jpg)
+}
+
 
 #smallConditions {
     display: flex;
@@ -175,10 +229,18 @@ nav a:active {
     margin-right: 25%;
 }
 
-#dial img {
+#dial {
+    height: 150px;
+    width: 150px;
+    background: no-repeat center/85% url('/weather/images/wind-pointer.png');
+    z-index: 100;
+    margin: -.6em auto 0;
+}
+
+/*#dial img {
     align-self: center;
     width: 75%;
-}
+}*/
 
 #wind {
     display: flex;
@@ -278,6 +340,26 @@ footer {
         display: flex;
         justify-content:space-around;
         padding: 30px 0;
+    }
+
+    .clear{
+        background-image: url(/weather/images/weather-images/clear-1100x350.jpg);
+    }
+
+    .clouds{
+        background-image: url(/weather/images/weather-images/clouds-1100x350.jpg);
+    }
+
+    .fog{
+        background-image: url(/weather/images/weather-images/fog-1100x350.jpg)
+    }
+
+    .rain{
+        background-image: url(/weather/images/weather-images/rain-1100x350.jpg)
+    }
+
+    .snow{
+        background-image: url(/weather/images/weather-images/snow-1100x350.jpg)
     }
 
     #smallConditions {

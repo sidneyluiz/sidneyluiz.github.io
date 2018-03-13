@@ -9,7 +9,7 @@
 const temp = 31;
 const speed = 5;
 buildWC(speed, temp);
-const direction = "S";
+const direction = "WSW";
 windDial(direction);
 const WEATHER = "mist";
 let curWeatherImage = getCondition(WEATHER);
@@ -43,43 +43,58 @@ function windDial(direction) {
     // Get the container
     const dial = document.getElementById("dial");
     console.log(direction);
+
+    /* ***********************************************
+            EXTRA - I created one extra line
+            to change the direction label
+    ************************************************ */
+    const labelDirection =document.getElementById("directionLabel");
+
     // Determine the dial class
     switch (direction) {
         case "North":
         case "N":
             dial.setAttribute("class", "n"); //"n" is the CSS rule selector
+/**EXTRA**/ labelDirection.innerHTML = "N";
             break;
         case "NE":
         case "NNE":
         case "ENE":
             dial.setAttribute("class", "ne");
+/**EXTRA**/ labelDirection.innerHTML = "NE";
             break;
         case "NW":
         case "NNW":
         case "WNW":
             dial.setAttribute("class", "nw");
+/**EXTRA**/ labelDirection.innerHTML = "NW";
             break;
         case "South":
         case "S":
             dial.setAttribute("class", "s");
+/**EXTRA**/ labelDirection.innerHTML = "S";
             break;
         case "SE":
         case "SSE":
         case "ESE":
             dial.setAttribute("class", "se");
+/**EXTRA**/ labelDirection.innerHTML = "SE";
             break;
         case "SW":
         case "SSW":
         case "WSW":
             dial.setAttribute("class", "sw");
+/**EXTRA**/ labelDirection.innerHTML = "SW";
             break;
         case "East":
         case "E":
             dial.setAttribute("class", "e");
+/**EXTRA**/ labelDirection.innerHTML = "E";
             break;
         case "West":
         case "W":
             dial.setAttribute("class", "w");
+/**EXTRA**/ labelDirection.innerHTML = "W";
             break;
     }
 
@@ -93,15 +108,15 @@ function windDial(direction) {
 function getCondition(WEATHER) {
 
     if (WEATHER.includes('blue sky') || WEATHER.includes('sunny') || WEATHER.includes('just sun') || WEATHER.includes('clear sky')) {
-        return 'clear';
+        return "clear";
     } else if (WEATHER.includes("partly cloudy") || WEATHER.includes("clouds on the sky") || WEATHER.includes('clouds')) {
-        return 'clouds';
+        return "clouds";
     } else if (WEATHER.includes('mist') || WEATHER.includes('foggy') || WEATHER.includes('smog') || WEATHER.includes('haze')) {
-        return 'fog';
+        return "fog";
     } else if (WEATHER.includes('rainning') || WEATHER.includes('wet wheather') || WEATHER.includes('flood') || WEATHER.includes('precipitation')) {
-        return 'rain';
+        return "rain";
     } else(WEATHER.includes('snowstorm') || WEATHER.includes('snowing') || WEATHER.includes('blizzard') || WEATHER.includes('snowfall'))
-    return 'snow';
+    return "snow";
 }
 
 //Write the changeSummaryImage() function.

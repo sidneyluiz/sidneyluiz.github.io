@@ -47,6 +47,10 @@ h6 {
     font-family: Sansita, arial, sans-serif;
 }
 
+.hide{
+    display: none;
+}
+
 /* Mobile rules*/
 
 header, nav ul, h1, #locationInfo{

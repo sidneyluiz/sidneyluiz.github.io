@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page | Weather Site</title>
+    <meta name="description" content="Home Page Weather Page.">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="/weather/css/screen.css">
+</head>
+<!--Sidney Rodrigues, Leah-->
+<body>
+   <div>
+    <header>
+        <div class="logo">
+            &#9748;
+        </div>
+        <h1 class="site-title">The Weather Site</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="/index.html" title="Go to home page">Home</a></li>
+            <li><a href="#" title="Search content in the website">Search</a></li>
+            <li><a href="/weather/franklin.html" title="Go to Franklin weather page">Franklin</a></li>
+            <li><a href="/weather/greenville.html" title="Go to Greenville weather page">Greenville</a></li>
+            <li><a href="/weather/springfield.html" title="Go to Springfield weather page">Springfield</a></li>
+        </ul>
+    </nav>
+       <p id="status" class="hide"></p>
+       <main>
+
+        <h1>Home Page</h1>
+
+        <div id="locationInfo">
+            <p><b>Zip:</b> <span id="zip">83237</span> |<b>Elevation:</b> <span id="elevation">4501 ft.</span> |<b>Location:</b> <span id="location">42.07&deg; S,111.79&deg; W</span></p>
+        </div>
+
+
+        <!-- curWeather holds temps, wind and video data -->
+        <div id="curWeather" class="clear">
+            <!-- smallConditions holds temps, wind data -->
+            <div id="smallConditions">
+
+                <section id="temps">
+                    <h2>Temperature</h2>
+
+                    <h3 id="tempRightNow">24&deg;F</h3>
+                    <p id="hot">34&deg;F</p>
+                    <p id="cold">21&deg;F</p>
+                    <p id="feels">??</p>
+                </section>
+
+                <section id="wind">
+                    <h2>Wind</h2>
+                    <span id="north">N</span>
+                    <div id="dial" class="n">
+                    </div>
+                    <p id="speed">2 mph</p>
+                    <p><b>Direction</b>: <span id="directionLabel">NW</span></p>
+                    <p><b>Gusts</b>: <span id="gust">5mph</span></p>
+                </section>
+            </div>
+
+            <section id="video">
+                <h2>Video Forecast</h2>
+                <img src=/weather/images/video.png alt="Video Player Image">
+            </section>
+        </div>
+
+        <section id="hourly">
+            <h2>Hourly Forecast</h2>
+            <ul>
+                <li>12am: <span id="0">21&deg;F</span></li>
+                <li>1am: <span id="1">21&deg;F</span></li>
+                <li>2am: <span id="2">20&deg;F</span></li>
+                <li>3am: <span id="3">20&deg;F</span></li>
+                <li>4am: <span id="4">20&deg;F</span></li>
+                <li>5am: <span id="5">20&deg;F</span></li>
+                <li>6am: <span id="6">20&deg;F</span></li>
+                <li>7am: <span id="7">21&deg;F</span></li>
+                <li>8am: <span id="8">25&deg;F</span></li>
+                <li>9am: <span id="9">28&deg;F</span></li>
+                <li>10am: <span id="10">30&deg;F</span></li>
+                <li>11am: <span id="11">34&deg;F</span></li>
+                <li>12pm: <span id="12">35&deg;F</span></li>
+                <li>1pm: <span id="13">37&deg;F</span></li>
+                <li>2pm: <span id="14">38&deg;F</span></li>
+                <li>3pm: <span id="15">39&deg;F</span></li>
+                <li>4pm: <span id="16">39&deg;F</span></li>
+                <li>5pm: <span id="17">38&deg;F</span></li>
+                <li>6pm: <span id="18">36&deg;F</span></li>
+                <li>7pm: <span id="19">34&deg;F</span></li>
+                <li>8pm: <span id="20">33&deg;F</span></li>
+                <li>9pm: <span id="21">33&deg;F</span></li>
+                <li>10pm: <span id="22">31&deg;F</span></li>
+                <li>11pm: <span id="23">31&deg;F</span></li>
+            </ul>
+        </section>
+    </main>
+       <div class="linha"></div>
+    <footer>
+        &copy;2018 Weather Site
+    </footer>
+    </div>
+    <script src="/weather/js/functions.js"></script>
+    <script src="/weather/js/geo_loc.js"></script>
+</body>
+</html>

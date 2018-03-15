@@ -320,7 +320,7 @@ footer {
     nav {
         margin: -2px 0px 0px 0px;
         position: relative;
-        font-size: 2vw;
+        font-size: 1.8vw;
         width: auto;
     }
 
@@ -388,7 +388,7 @@ footer {
     }
 
     #tempRightNow {
-        padding-left: 2.7vw;
+        padding-left: 1.0vw;
     }
 
     #hot {

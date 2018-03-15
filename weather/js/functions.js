@@ -251,8 +251,10 @@ function displayData(data){
     let cityState = data.current_observation.display_location.full;
     console.log(cityState);
     //Display City and State
-    let city = document.getElementById('cityState');
-    city.innerHTML = cityState;
+    let cityT = document.getElementById('cityStateT');
+    cityT.innerHTML = cityState;
+    let cityH = document.getElementById('cityStateH');
+    cityH.innerHTML = cityState;
     //Hourly Forecast
     let am = data.hourly_forecast;
     console.log(am);

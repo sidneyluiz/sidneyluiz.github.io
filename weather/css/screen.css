@@ -155,11 +155,11 @@ nav a:link {
 }
 
 nav a:visited {
-    color: #000;
+    color: #fff;
 }
 
 nav a:hover {
-    color: #FFF;
+    color: #000;
 }
 
 nav a:active {

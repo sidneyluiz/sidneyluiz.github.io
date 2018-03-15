@@ -4,23 +4,11 @@
 
 /*console.log('My javascript is being read.'); */
 
-// Variables for Function Use
-
-//const temp = 31;
-//const speed = 5;
-//buildWC(speed, temp);
-//const direction = "WSW";
-//windDial(direction);
-//const WEATHER = "mist";
-//changeSummaryImage(curWeatherImage);
-
-
-
 
 /* This function calculates a wind chill temperature */
 function buildWC(speed, temp) {
 
-    const feelTemp = document.getElementById('feels');
+    let feelTemp = document.getElementById('feels');
 
     // Compute the windchill
     let wc = 35.74 + 0.6215 * temp - 35.75 * Math.pow(speed, 0.16) + 0.4275 * temp * Math.pow(speed, 0.16);
@@ -272,12 +260,22 @@ function displayData(data){
     let imgVideo = document.getElementById('imgVideo');
     imgVideo.src = videoIcon;
 
+
+    //Weather credit Icon
+    let creditIcon = data.current_observation.image.url;
+    console.log(creditIcon);
+    //Display Weather credit Icon
+    let imgCreIcon = document.getElementById('imgCreIcon');
+    imgCreIcon.src = creditIcon;
+
     //Hourly Forecast
     let hourlyTemp = [];
     for (let i=0; i<24; i++){
     hourlyTemp[i] = data.hourly_forecast[i].temp.english;
     console.log(hourlyTemp);
     }
+
+    showContent();
 
 }
 
@@ -287,3 +285,12 @@ function metersToFeet(elevation) {
     return feet;
 }
 
+//Remove status and show content
+function showContent(){
+    //hide status
+    let idStatus = document.getElementById('status');
+    idStatus.setAttribute('class','hide');
+    //show loaded content
+    let hide = document.getElementById("content");
+    hide.setAttribute("class", "show");
+}

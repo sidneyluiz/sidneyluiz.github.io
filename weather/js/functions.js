@@ -247,6 +247,12 @@ function displayData(data){
     //Display location
     let loc = document.getElementById('location');
     loc.innerHTML = lat + ' , ' + long;
+    //City and State
+    let cityState = data.current_observation.display_location.full;
+    console.log(cityState);
+    //Display City and State
+    let city = document.getElementById('cityState');
+    city.innerHTML = cityState;
     //Hourly Forecast
     let am = data.hourly_forecast;
     console.log(am);

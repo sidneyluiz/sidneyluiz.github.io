@@ -236,9 +236,11 @@ function displayData(data){
     //Elevation
     let elevation = data.current_observation.display_location.elevation;
     console.log(elevation);
+    //call meteres to feet
+    metersToFeet(elevation);
     //Display Elevation
     let idElevation = document.getElementById('elevation');
-    idElevation.innerHTML = elevation + ' ft.';
+    idElevation.innerHTML = metersToFeet(elevation) + ' ft.';
     //Location
     let lat = data.current_observation.display_location.latitude;
     console.log(lat);
@@ -256,9 +258,32 @@ function displayData(data){
     let cityH = document.getElementById('cityStateH');
     cityH.innerHTML = cityState;
     //Hourly Forecast
-    let am = data.hourly_forecast;
-    console.log(am);
+
+    /*let hourlyTemp = [];
+    for (let i=0; i<24; i++){
+    hourlyTemp[i] = data.hourly_forecast[i].temp.english;
+    console.log(hourlyTemp);
+    }*/
+
+    //Video Icon
+    let videoIcon = data.current_observation.image.url;
+    console.log(videoIcon);
+    //Display Video Icon
+    let imgVideo = document.getElementById('imgVideo');
+    imgVideo.src = videoIcon;
+
+    //title video
+    let titleVideo = data.current_observation.image.title;
+    console.log(titleVideo);
+    //Display Laberl Viode
+    let labelVideo = document.getElementById('hVideo');
+    labelVideo.innerHTML = titleVideo;
 
 }
 
+//convert meters to feet
+function metersToFeet(elevation) {
+    let feet = elevation/0.3048;
+    return feet;
+}
 

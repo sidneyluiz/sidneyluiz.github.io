@@ -246,7 +246,7 @@ function displayData(data){
     console.log(long);
     //Display location
     let loc = document.getElementById('location');
-    loc.innerHTML = lat + ' , ' + long;
+    loc.innerHTML = long + ' , ' + lat;
     //City and State
     let cityState = data.current_observation.display_location.full;
     console.log(cityState);

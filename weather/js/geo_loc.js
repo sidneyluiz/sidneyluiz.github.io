@@ -11,7 +11,7 @@ getGeoLocation();
 // Gets longitude and latitude of current location
 function getGeoLocation() {
     const STATUS = document.getElementById('status');
-    STATUS.innerHTML = 'Getting Location...';
+    STATUS.innerHTML = '<img src="/weather/images/loading.gif" alt="loading" width=228" height="228">' + ' Getting Location...';
 
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function (position) {

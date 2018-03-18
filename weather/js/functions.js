@@ -99,15 +99,15 @@ function getCondition(weather) {
 
 
 
-    if (weather.includes('blue sky') || weather.includes('sunny') || weather.includes('just sun') || weather.includes('clear sky')) {
+    if (weather.includes('Clear') || weather.includes('Mostly Sunny') || weather.includes('Partly Sunny') || weather.includes('Sunny')) {
         return "clear";
-    } else if (weather.includes("partly cloudy") || weather.includes("clouds on the sky") || weather.includes('clouds')) {
+    } else if (weather.includes("Partly Cloudy") || weather.includes("Funnel Cloud") || weather.includes('Mostly Cloudy') || weather.includes('Overcast') || weather.includes('Cloudy')) {
         return "clouds";
-    } else if (weather.includes('mist') || weather.includes('foggy') || weather.includes('smog') || weather.includes('haze')) {
+    } else if (weather.includes('Fog') || weather.includes('Patches of Fog') || weather.includes('Shallow Fog') || weather.includes('Partial Fog') || weather.includes('Smoke') || weather.includes('Light Smoke') || weather.includes('Heavy Smoke') || weather.includes('Light Fog') || weather.includes('Heavy Fog') || weather.includes('Haze')) {
         return weather = "fog";
-    } else if (weather.includes('rain') || weather.includes('wet wheather') || weather.includes('flood') || weather.includes('precipitation')) {
+    } else if (weather.includes('Rain') || weather.includes('Light Rain') || weather.includes('Heavy Rain') || weather.includes('Drizzle') || weather.includes('Light Drizzle') || weather.includes('Heavy Drizzle') || weather.includes('Thunderstorm') || weather.includes('Thunderstorms')) {
         return "rain";
-    } else(weather.includes('Snow') || weather.includes('Heavy Snow') || weather.includes('blizzard') || weather.includes('snowfall') || weather.includes('Light Snow'))
+    } else(weather.includes('Snow') || weather.includes('Heavy Snow') || weather.includes('Blizzard') || weather.includes('Snow Grains') || weather.includes('Light Snow') || weather.includes('Light Snow Grains') || weather.includes('Heavy Snow Grains') || weather.includes('Snow Grains') || weather.includes('Ice Crystals') || weather.includes('Light Ice Crystals') || weather.includes('Heavy Ice Crystals') || weather.includes('Ice Pellets') || weather.includes('Light Ice Pellets'))
     return "snow";
 }
 
@@ -157,7 +157,7 @@ function changeSummaryImage(curWeatherImage) {
 // Get Data from API
 function getData(LOCALE) {
     const WU_API_KEY = '75576a32a1a0330a';
-    const URL = "https://api.wunderground.com/api/" + WU_API_KEY + "/almanac/conditions/forecast/hourly/q/" + LOCALE + ".json";
+    const URL = "https://api.wunderground.com/api/" + WU_API_KEY + "/conditions/forecast/hourly/q/" + LOCALE + ".json";
     fetch(URL)
         .then(response => response.json())
         .then(function (data) {
@@ -177,6 +177,7 @@ function displayData(data){
     //change background based on the weather
     let curWeatherImage = getCondition(weather);
     changeSummaryImage(curWeatherImage);
+
     //Current temperature
     let temp = data.current_observation.temp_f;
     console.log(temp);
@@ -184,6 +185,7 @@ function displayData(data){
     let curTemp = document.getElementById('tempRightNow');
     let ct = temp+'&deg;F';
     curTemp.innerHTML = ct;
+
     //Wind Speed
     let speed = data.current_observation.wind_mph;
     console.log(speed);
@@ -193,15 +195,17 @@ function displayData(data){
     windSpeed.innerHTML = spd;
     //Feels Like Function
     buildWC(speed, temp);
+
     //Wind direction
     let direction = data.current_observation.wind_dir;
     console.log(direction);
     windDial(direction);
+
     //High Temperature
-    let high = data.almanac.temp_high.normal.F;
+    let high = data.forecast.simpleforecast.forecastday["0"].high.fahrenheit;
     console.log(high);
     //Low Temperature
-    let low = data.almanac.temp_low.normal.F;
+    let low = data.forecast.simpleforecast.forecastday["0"].low.fahrenheit;
     console.log(low);
     //Display High Temp
     let hot = document.getElementById('hot');
@@ -209,18 +213,21 @@ function displayData(data){
     //Display Low Temp
     let cold = document.getElementById('cold');
     cold.innerHTML = low+'&deg;F';
+
     //Gust
     let gust = data.current_observation.wind_gust_mph;
     console.log(gust);
     //Display Gust
     let mphGust = document.getElementById('gust');
     mphGust.innerHTML = gust+' mph';
+
     //Zip Code
     let zip = data.current_observation.display_location.zip;
     console.log(zip);
     //Display Zip
     let idZip = document.getElementById('zip');
     idZip.innerHTML = zip;
+
     //Elevation
     let elevation = data.current_observation.display_location.elevation;
     console.log(elevation);
@@ -229,6 +236,7 @@ function displayData(data){
     //Display Elevation
     let idElevation = document.getElementById('elevation');
     idElevation.innerHTML = metersToFeet(elevation) + ' ft.';
+
     //Location
     let lat = data.current_observation.display_location.latitude;
     console.log(lat);
@@ -237,6 +245,7 @@ function displayData(data){
     //Display location
     let loc = document.getElementById('location');
     loc.innerHTML = long + ' , ' + lat;
+
     //City and State
     let cityState = data.current_observation.display_location.full;
     console.log(cityState);
@@ -275,8 +284,61 @@ function displayData(data){
     console.log(hourlyTemp);
     }
 
-    showContent();
+    //Hourly Temp Display
+    let zero = document.getElementById("zero");
+    zero.innerHTML = hourlyTemp[0]+'&deg;F';
+    let one = document.getElementById("one");
+    one.innerHTML = hourlyTemp[1]+'&deg;F';
+    let two = document.getElementById("two");
+    two.innerHTML = hourlyTemp[2]+'&deg;F';
+    let three = document.getElementById("three");
+    three.innerHTML = hourlyTemp[3]+'&deg;F';
+    let four = document.getElementById("four");
+    four.innerHTML = hourlyTemp[4]+'&deg;F';
+    let five = document.getElementById("five");
+    five.innerHTML = hourlyTemp[5]+'&deg;F';
+    let six = document.getElementById("six");
+    six.innerHTML = hourlyTemp[6]+'&deg;F';
+    let seven = document.getElementById("seven");
+    seven.innerHTML = hourlyTemp[7]+'&deg;F';
+    let eight = document.getElementById("eight");
+    eight.innerHTML = hourlyTemp[8]+'&deg;F';
+    let nine  = document.getElementById("nine");
+    nine.innerHTML = hourlyTemp[9]+'&deg;F';
+    let ten = document.getElementById("ten");
+    ten.innerHTML = hourlyTemp[10]+'&deg;F';
+    let eleven = document.getElementById("eleven");
+    eleven.innerHTML = hourlyTemp[11]+'&deg;F';
+    let twelve = document.getElementById("twelve");
+    twelve.innerHTML = hourlyTemp[12]+'&deg;F';
+    let thirteen = document.getElementById("thirteen");
+    thirteen.innerHTML = hourlyTemp[13]+'&deg;F';
+    let fourteen = document.getElementById("fourteen");
+    fourteen.innerHTML = hourlyTemp[14]+'&deg;F';
+    let fifteen = document.getElementById("fifteen");
+    fifteen.innerHTML = hourlyTemp[15]+'&deg;F';
+    let sixteen = document.getElementById("sixteen");
+    sixteen.innerHTML = hourlyTemp[16]+'&deg;F';
+    let seventeen = document.getElementById("seventeen");
+    seventeen.innerHTML = hourlyTemp[17]+'&deg;F';
+    let eighteen = document.getElementById("eighteen");
+    eighteen.innerHTML = hourlyTemp[18]+'&deg;F';
+    let nineteen = document.getElementById("nineteen");
+    nineteen.innerHTML = hourlyTemp[19]+'&deg;F';
+    let twenty = document.getElementById("twenty");
+    twenty.innerHTML = hourlyTemp[20]+'&deg;F';
+    let twentyOne = document.getElementById("twentyOne");
+    twentyOne.innerHTML = hourlyTemp[21]+'&deg;F';
+    let twentyTwo = document.getElementById("twentyTwo");
+    twentyTwo.innerHTML = hourlyTemp[22]+'&deg;F';
+    let twentyThree = document.getElementById("twentyThree");
+    twentyThree.innerHTML = hourlyTemp[23]+'&deg;F';
 
+    //Insert favicon of weather condition
+    document.querySelector("link[rel='shortcut icon']").href = videoIcon;
+
+    //display content once everything is loaded.
+    showContent();
 }
 
 //convert meters to feet

@@ -183,7 +183,7 @@ function displayData(data){
     console.log(temp);
     //Display current temperature
     let curTemp = document.getElementById('tempRightNow');
-    let ct = temp+'&deg;F';
+    let ct = Math.round(temp)+'&deg;F';
     curTemp.innerHTML = ct;
 
     //Wind Speed

@@ -227,7 +227,7 @@ nav a:active {
 }
 
 #tempRightNow {
-    padding-left: 4vw;
+    padding-left: 20px;
 }
 
 #hot {
@@ -408,17 +408,16 @@ footer {
     }
 
     #tempRightNow {
-        padding-left: 3vw;
-        padding-bottom: 25px;
+        padding-left: 37px;
     }
 
     #hot {
-        padding-left: 4.65vw;
+        padding-left: 75px;
     }
 
 
     #feels {
-        padding-left: 3.8vw;
+        padding-left: 60px;
     }
 
     #dial img{
@@ -500,7 +499,7 @@ footer {
     }
 
     #temps h3 {
-        font-size: 4em;
+        font-size: 4.5em;
         }
 
 }

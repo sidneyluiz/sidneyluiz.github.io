@@ -1,0 +1,187 @@
+/*This is my screen file for the acme project*/
+
+/*Import must be the first thing.
+Imported the normalize css stylesheet*/
+
+@import url('normalize.css');
+
+/*--------------Table of Contents------------------
+
+1. General rules
+2. Mobile first rules
+
+
+
+/*----- 1. General rules -----*/
+
+*   {
+    box-sizing: border-box;
+}
+
+*:before, *:after{
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 1em;
+    font-family: Helvetica, arial, sans-serif;
+    margin-bottom: 2em;
+    background-size: cover;
+    background-image: url(/acme/images/site/background.jpg);
+    margin: .5em;
+}
+h1, h2{
+    font-family: helvetica, Georgia, serif;
+}
+
+/*hides the content on the page*/
+
+.hide {
+    display: none;
+}
+
+/*----- 2. Mobile first rules -----*/
+
+#content {
+    background-color: #ffffff;
+}
+.align{
+    margin-left: 15%;
+}
+.en{
+    margin-left: 25%;
+}
+
+nav {
+    background-color: red;
+    padding-top: .1em;
+}
+
+nav ul li {
+    display: inline-block;
+    font-size: 6vw;
+    color: #FFF;
+    padding: .2em;
+}
+
+nav a:link, nav a:visited {
+    text-decoration: none;
+    color: #FFF;
+}
+
+nav li:hover, nav a:hover {
+    background-color: #FFF;
+    color: red;
+    cursor:pointer;
+}
+
+footer {
+    border-top: 10px solid #000000;
+    margin: .3em;
+    text-align: center;
+    flex-flow: column wrap;
+}
+
+footer p {
+    margin: auto;
+}
+
+#banner {
+    background-image: url(/acme/images/site/feature.jpg);
+    background-size: cover;
+    height: 408px;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.3em;
+}
+#banner ul {
+    padding-right: 5em;
+    margin-top: 0;
+    height: 408px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+#recipes div {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.food {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.food_pic {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+}
+
+@media screen and (min-width: 900px) {
+    #banner ul {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    .food {
+        margin: .5em;
+    }
+}
+
+#contentInfo {
+    margin: .2em;
+    font-size: 1.5em;
+}
+
+#details {
+    display: block;
+    flex-direction: row;
+    align-items: flex-start
+}
+
+#image {
+    margin-right: 1em;
+
+}
+
+#info ul{
+    list-style: none;
+    padding-left: 0;
+}
+
+#price {
+    margin-top: 2em;
+    color: #990033;
+    font-size: 2em;
+}
+
+
+/* ----- 2. Large Screens: 600px / 37.5em -------*/
+
+@media screen and (min-width: 37.5em) {
+    body>div {
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+    a{
+        text-align: -webkit-center;
+    }
+    #divReview {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    #reviewsMain {
+        width: 60%;
+    }
+    #recipes {
+        width: 40%;
+    }
+    #details {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start
+    }
+    nav ul li {
+    font-size: 2.5vw;
+    margin-left: 6%;
+}
+
+}

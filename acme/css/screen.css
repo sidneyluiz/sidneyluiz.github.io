@@ -75,6 +75,10 @@ nav li:hover, nav a:hover {
     cursor:pointer;
 }
 
+.nolist{
+    list-style: none;
+}
+
 footer {
     border-top: 10px solid #000000;
     margin: .3em;

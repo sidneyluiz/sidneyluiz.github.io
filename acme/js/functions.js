@@ -28,7 +28,7 @@ function navContent(data)
 }
 function addEventeListenersToList(data, navDisplay){
     var anvil = document.getElementById("Anvil");
-    var explosive = document.getElementById("TNT");
+    var explosive = document.getElementById("Explosives");
     var decoy = document.getElementById("Decoy");
     var trap = document.getElementById("Trap");
     var aux = [anvil, explosive, decoy,trap];

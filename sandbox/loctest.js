@@ -35,7 +35,7 @@ function getGeoLocation() {
 
 // Get Data from API
 function getData(LOCALE) {
-    const WU_API_KEY = '75576a32a1a0330a';
+    const WU_API_KEY = 'tirei por segurança';
     const URL = "https://api.wunderground.com/api/" + WU_API_KEY + "/conditions/q/" + LOCALE + ".json";
     fetch(URL)
         .then(response => response.json())
